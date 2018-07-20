@@ -3,16 +3,16 @@
 #' The consideration set model takes data with the format of each row
 #' representing a choice for some person. First, the model constructs a set of
 #' choices in consideration for each person via a binary logit model (the
-#' Selection step), then selects choices from consideration set via a
-#' multinomial logit model (the Consideration step).
+#' Consideration step), then selects choices from consideration set via a
+#' multinomial logit model (the Selection step).
 #'
 #' @param YObservedInput A vector of observed choices acting as the response
 #'   variable for all subjects, each row representing a unique choice and the
 #'   value representing how many times it was chosen.
 #' @param XConsidInput A vector or matrix of factors that influences what
-#'   choices are to be chosen from the consideration set, i.e. for second step.
+#'   choices are to be chosen from the consideration set, i.e. for first step.
 #' @param XSelectInput A vector or matrix of factors that influences what
-#'   choices are to be included in the consideration set, i.e. for first step.
+#'   choices are to be included in the consideration set, i.e. for second step.
 #' @param NumOpts Number of options for consideration set. Due to the nature of
 #'   the model, NumOpts needs to be a factor of the total number of rows, such
 #'   that every n (value of NumOpts) rows represent a set of observed choices
